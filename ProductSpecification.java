@@ -14,4 +14,5 @@ public class ProductSpecification {
     public Money getPrice() {  return price;  }
 
     public String getDescription() {   return description;   }
+    
 }
