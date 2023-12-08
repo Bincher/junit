@@ -1,3 +1,4 @@
+// Class SalesLineltem
 public class SalesLineItem {
     private int quantity;
     private ProductSpecification productSpec;
@@ -5,6 +6,14 @@ public class SalesLineItem {
     public SalesLineItem(ProductSpecification spec, int quantity) {
         this.productSpec = spec;
         this.quantity = quantity;
+    }
+
+    public ProductSpecification getProductSpec() {
+        return productSpec;
+    }
+
+    public int getQuantity() {
+        return quantity;
     }
 
     public Money getSubtotal() {   

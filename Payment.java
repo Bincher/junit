@@ -1,3 +1,4 @@
+// Class Payment
 public class Payment {
     private Money amount;
 

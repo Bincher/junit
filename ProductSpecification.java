@@ -1,3 +1,4 @@
+// Class ProductSpecification
 public class ProductSpecification {
     private ItemID id;
     private Money price;
@@ -9,11 +10,15 @@ public class ProductSpecification {
         this.description = description; 
     }
 
-    public ItemID getltemlD()  {  return id;  }
+    public ItemID getltemlD()  {  
+        return id;  
+    }
 
-    public Money getPrice() {  return price;  }
+    public Money getPrice() {  
+        return price;  
+    }
 
-    public String getDescription() {   return description;   }
-
-    
+    public String getDescription() {   
+        return description;   
+    }
 }

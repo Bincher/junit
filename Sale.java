@@ -19,15 +19,21 @@ public class Sale {
         lineltems.add(new SalesLineItem(spec, quantity));
     }
 
-    public Money getTotal() {
-        Money total = new Money();
-        Iterator i = lineltems.iterator( ) ;    
-        while ( i.hasNext() ){
-            SalesLineItem sli = (SalesLineItem) i.next();
-            total.add( sli.getSubtotal() );
-        }
-        return total; 
+    public List<SalesLineItem> getLineltems() {
+        return lineltems;
     }
 
-    public void makePayment(Money cashTendered) { payment = new Payment(cashTendered);  }
+    public Money getTotal() {
+        Money total = new Money();
+        Iterator i = lineltems.iterator();
+        while (i.hasNext()) {
+            SalesLineItem sli = (SalesLineItem) i.next();
+            total = total.add(sli.getSubtotal());
+        }
+        return total;
+    }
+
+    public void makePayment(Money cashTendered) { 
+        payment = new Payment(cashTendered);  
+    }
 }

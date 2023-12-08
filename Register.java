@@ -1,3 +1,4 @@
+// Class Register
 public class Register {
     private ProductCatalog catalog;
     private Sale sale;
@@ -5,7 +6,9 @@ public class Register {
     public Register(ProductCatalog catalog) {  
       this.catalog = catalog; 
     }
-
+    public ProductCatalog getCatalog() {
+      return catalog;
+    } 
 		public void makeNewSale() {   
       sale = new Sale();    
     }
@@ -18,5 +21,8 @@ public class Register {
     }
     public void makePayment(Money cashTendered) {   
       sale.makePayment(cashTendered);  
+    }
+    public Sale getSale() {
+      return sale;
     }
 }
